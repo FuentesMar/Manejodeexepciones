@@ -6,22 +6,24 @@ public class CaracterEn {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Inserte una Palabra/cadena");
-        String lectTeclado = sc.next();
+        String word = sc.next();
         System.out.println("Inserte un numero");
         int numero = sc.nextInt();
 
         try {
-            char x;
-            if (!(numero >lectTeclado.length())){
-                x = lectTeclado.charAt(numero-1);
-                System.out.println("El Caracter que se encuentra en la posicion " + numero + " es " + x );
-            }else {
-                throw new Exception("Has intentado recuperar una posición de la cadena de caracteres que no se encuentra dentro de la cadena que mandaste/escribiste;");
-            }
+            caracterEn(word, numero);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-
+    public static void caracterEn(String word, int numero) throws Exception {
+        char x;
+        if (!(numero > word.length())) {
+            x = word.charAt(numero - 1);
+            System.out.println("El Caracter que se encuentra en la posicion " + numero + " es " + x);
+        } else {
+            throw new Exception("Has intentado recuperar una posición de la cadena de caracteres que no existe;");
+        }
+    }
 }
