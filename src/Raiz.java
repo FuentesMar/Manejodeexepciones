@@ -6,14 +6,14 @@ public class Raiz {
 
         try {
             System.out.println("Introduzca el numero al que quiera sacar raiz");
-            int numero = sc.nextInt();
+            int n = sc.nextInt();
             Double raiz;
-            if (!(numero < 0)) {
-                raiz = Math.sqrt(numero);
-                System.out.println("El valor de la raiz de " + numero + " es: " + raiz);
+            if (!(n < 0)) {
+                raiz = Math.sqrt(n);
+                System.out.println("El valor de la raiz de " + n + " es: " + raiz);
             } else {
                 throw new NumeroNegativoException("El numero tiene un valor negativo, por lo cual no tiene una raiz",
-                        new Throwable("Numero: " + numero));
+                        new Throwable("Numero: " + n));
 
             }
         } catch (NumeroNegativoException ex) {

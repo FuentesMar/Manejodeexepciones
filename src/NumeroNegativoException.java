@@ -5,7 +5,6 @@ public class NumeroNegativoException extends Exception {
         super(palabra);
     }
 
-
     public NumeroNegativoException(String palabra, Throwable error){
         super(palabra, error);
     }
